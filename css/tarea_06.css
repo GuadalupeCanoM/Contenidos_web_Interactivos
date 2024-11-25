@@ -1,0 +1,233 @@
+* {
+        box-sizing: border-box;
+        margin:0px;
+        padding:0px;
+}
+
+/*Importo la fuente local*/
+@font-face {
+    font-family: "Dancing Script";
+    src:local("Dancing Script"), url("../fuentes/DancingScript/DancingScript.ttf");
+}
+
+/* Definimos la estructura de la maqueta con grid*/    
+.contenedor{
+    display:grid;
+    grid-template-areas:"cabecera"
+        "navegacion"
+        "noticias"
+        "pie";
+        
+    grid-template-columns: 80%;
+    grid-template-rows: auto auto  1fr auto;
+    grid-gap: 5px;
+    justify-content: center;
+}
+
+/* Asignamos cada una de las zonas de la maqueta*/
+.cabecera{
+    grid-area:cabecera;
+    display: flex; 
+    justify-content: center;
+    margin-top: 130px;
+    border: 3px solid green;
+    
+    
+}
+
+.foto{
+    width: 120px;
+}
+
+/* Defininimos el estilo del encabezado */
+.encabezado {
+    color:seagreen;
+    padding: 20px 20px;
+    align-self: center;
+   
+}
+
+/* Definimos la zona de navegación */ 
+/* Con un flex y centramos los elementos */
+.navegacion{
+    grid-area:navegacion;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid green;
+    
+}
+
+.navegacion ul{
+    margin: 10px 10px;
+   
+}
+
+.navegacion ul li{
+    display: inline;
+    text-align:center;
+    border: 3px solid olive;
+    padding: 0px 40px;
+     
+}
+
+.navegacion ul li a{
+    text-decoration: none;
+}
+
+.navegacion ul li a:hover{
+    color:red;
+}
+
+        
+
+
+/* Definimos la zona de noticias*/
+
+.noticias{
+    grid-area:noticias;
+    display:grid;
+    gap:20px
+    
+     
+}
+
+/* Cada noticia está formada por un titulo, una imagen y un cuerpo de noticia*/
+.noticia{
+    border: 3px solid blue;
+
+}
+
+.titulo_noticia{
+    font-family:"Verdana";
+    text-align: center;
+
+}
+.cuerpo_noticia{
+    display:flex;
+    margin:5px 10px;
+    font-family:"Verdana";
+}
+
+.imagen{
+    width:10rem;
+    height:auto;
+    margin-left: 5px;
+}
+
+.pie{
+    grid-area:pie;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid green;
+}
+.historico{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.licencia{
+    font-size: 15px;
+    color: black;
+}
+
+
+/* ---------------------------------------------------------------------------------------------------------------------- */
+/* Definimos la parte relacionada con la barra de accesibilidad, está fuera de la estructura del grid */
+.barra{
+    position: fixed; /*barra fija*/
+    top:0;
+    width: 100%;
+    height: 50px;
+    z-index: 100;
+    display:flex;
+    height: 120px;
+    border: 3px solid black;
+    background-color: blanchedalmond;
+    justify-content: center;
+    margin-bottom: 20px;
+       
+}    
+
+
+
+/* Definimos el estilo para la barra de botonoes */
+.barra_botones{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 30px;
+    
+    
+}
+
+/* Definimos los estilos de la zona de navegación */
+.nombre_barra{ 
+    margin-right: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Definimos el estilo de los botonoes de la barra.*/
+
+button, .seleccion_fuente{
+    border: 2px solid blue;
+    height: 50px;
+    padding:5px;
+    margin:5px;
+}
+
+button{
+    width:40px;
+    height:50px;
+}
+
+#boton-aumentar:visited{
+    color:red;
+}
+
+#boton-oscuro{
+    width:70px;  
+}
+
+#boton-simplificada{
+    width: 90px;
+}
+
+#boton-ultima-hora{
+    width: 100px;
+}
+
+#boton-reset{
+    width: 60px;
+}
+
+#boton-ocultar{
+    width: 70px;
+}
+
+.tamanios-fuente{
+    margin-top:15px;
+   
+}
+
+#boton-mostrar{
+    margin-left: 1000px;
+    margin-top:30px;
+    width: 70px;
+    border: solid 2px blue;
+    color: red;
+    
+}
+
+.tamanios-fuente{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap:20px;
+    margin-top:80px;
+    margin-left:-550px;
+}
+
+
